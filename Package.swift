@@ -3,18 +3,21 @@ import PackageDescription
 
 let package = Package(
     name: "OHHTTPStubs",
-    platforms: [
-      .iOS(.v10)
-    ],
     products: [
         .library(
             name: "OHHTTPStubs",
+            platforms: [
+              .iOS(.v10)
+            ],
             targets: [
                 "OHHTTPStubs",
             ]
         ),
         .library(
             name: "OHHTTPStubsSwift",
+            platforms: [
+              .iOS(.v10)
+            ],
             targets: [
                 "OHHTTPStubs",
                 "OHHTTPStubsSwift"
