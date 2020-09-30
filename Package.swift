@@ -1,23 +1,23 @@
-// swift-tools-version:4.0
+// swift-tools-version:5.0
 import PackageDescription
 
 let package = Package(
     name: "OHHTTPStubs",
+    platforms: [
+        .macOS(.v10_10),
+        .iOS(.v10),
+        .tvOS(.v9),
+        .watchOS(.v2)
+    ],
     products: [
         .library(
             name: "OHHTTPStubs",
-            platforms: [
-              .iOS(.v10)
-            ],
             targets: [
                 "OHHTTPStubs",
             ]
         ),
         .library(
             name: "OHHTTPStubsSwift",
-            platforms: [
-              .iOS(.v10)
-            ],
             targets: [
                 "OHHTTPStubs",
                 "OHHTTPStubsSwift"
@@ -40,5 +40,5 @@ let package = Package(
             name: "OHHTTPStubsSwiftTests",
             dependencies: ["OHHTTPStubsSwift", "OHHTTPStubs"]
         )
-    ]
-)
+    ],
+    swiftLanguageVersions: [.v5])
